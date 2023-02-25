@@ -1,0 +1,18 @@
+Задача 10: На столе лежат n монеток. Некоторые из них лежат вверх решкой, а некоторые – гербом. 
+Определите минимальное число монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной. 
+Выведите минимальное количество монет, которые нужно перевернуть
+
+n = int(input('Input money count: '))
+gerb = reshka = 0
+for i in range(n):
+    x = int(input('Input gerb "1" or reshka "0"? '))
+    if x == 1:
+        gerb += 1
+    else:
+        reshka += 1
+if gerb < reshka:
+    print(f'Turn {gerb} money in {reshka}, there are min')
+elif gerb == reshka:
+    print(f'Count gerb is the same count of reshka')
+else:
+    print((f'Turn {reshka} money in {gerb}, there are min'))
